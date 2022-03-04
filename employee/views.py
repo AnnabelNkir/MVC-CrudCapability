@@ -39,8 +39,8 @@ def edit_employee(request, id):
     }
     return render(request, 'edit.html', context)
 
-def delete_employee(request, id):
-    employee = Employee.objects.get(id=id)
+def delete_employee(request, pk):
+    employee = Employee.objects.get(id=pk)
 
     if request.method == 'POST':
         employee.delete()
