@@ -2,8 +2,8 @@
 
 A web application that utilizes Crud capabilities. It enables one to create entries on data on employees, update it, view and also delete entries.
 
-#### By Annabel Micheni
-#### **{February 3, 2022}**
+#### By [Annabel Micheni](https://github.com/AnnabelNkir) 
+#### **{March 3, 2022}**
 
 ## Requirements
 
@@ -18,20 +18,20 @@ Step 1 : Clone this repository using git clone https://github.com/AnnabelNkir/MV
 Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened.
 
 Step 3 : Open the terminal, go to the project directory and run the following commands: 
-
+```
 + pip install virtualenv then
 + virtualenv venv
 + source venv/bin/activate
-
+```
 Step 4 : Download the all dependencies in the requirements.txt using pip install -r requirements.txt.
 
 Step 5 : Setup Database
-SetUp your database User,Password, Host then make migrate
-
-`python manage.py makemigrations`
+Setup your database User,Password, Host then make migrate
+```
+python manage.py makemigrations`
    then
-`python manage.py migrate`
-
+python manage.py migrate`
+```
 Step 6 : You can now launch the application locally by running the command python manage.py runserver and copying the link given on the terminal on your browser.
 
 Step 7 : Run the command python manage.py createsuperuser to create an admin account in order to post. Access to the admin panel is by adding the path /admin to the address bar.
@@ -45,20 +45,21 @@ Step 9 :  Open the application on your browser 127.0.0.1:8000.
 ## User stories
 
 The user is expected to navigate seamlessly through the application.
-
+```
 + C- Create entries on employee data.
 + R- Read/ view the created data entries.
 + U- Update data entries of employees.
 + D- Delete data entries of employees.
-
+```
 ## Technologies
+```
 .Django
 .Git
 .HTML5 & CSS
 .Bootstrap
 .Python 3.8
 .Heroku
-
+```
 ## Live Link
 
 ### <a href="https://crudapp254.herokuapp.com/">CRUD application live link</a>
