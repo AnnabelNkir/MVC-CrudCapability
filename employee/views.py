@@ -44,16 +44,12 @@ def edit_employee(request, id):
 
 def delete_employee(request, id):
     employee = Employee.objects.get(id=id)
-    form = DeleteEmployeeForm(instance=employee)
 
     if request.method == 'POST':
-        form = DeleteEmployeeForm(request.POST, instance=employee)
-        if form.is_valid():
-            form.save()
-            return redirect('employees-list')
+        employee.delete()
+        return redirect('employees-list')
 
     context = {
         'employee': employee,
-        'form': form,
     }
     return render(request, 'delete.html', context)
