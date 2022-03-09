@@ -28,6 +28,7 @@
                     <td>{{ emp.emp_salary }}</td>
                     <td>
                         <a style="margin-right: 30px;" href="{% url 'edit-employee' emp.id %}">Edit</a>
+                        <a href="{% url 'delete-employee' emp.id %}">Delete</a>
                     </td>
                 </tr>
             {% endfor %}

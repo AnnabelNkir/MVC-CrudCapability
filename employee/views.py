@@ -1,6 +1,9 @@
 from django.shortcuts import render,redirect
+
+import employee
 from .models import Employee
 from .forms import *
+from .forms import EmployeeForm
 
 def employees_list(request):
     employees = Employee.objects.order_by('-id')
@@ -39,14 +42,18 @@ def edit_employee(request, id):
     }
     return render(request, 'edit.html', context)
 
-def delete_employee(request, pk):
-    employee = Employee.objects.get(id=pk)
+def delete_employee(request, id):
+    employee = Employee.objects.get(id=id)
+    form = DeleteEmployeeForm(instance=employee)
 
     if request.method == 'POST':
-        employee.delete()
-        return redirect('employees-list')
+        form = DeleteEmployeeForm(request.POST, instance=employee)
+        if form.is_valid():
+            form.save()
+            return redirect('employees-list')
 
     context = {
         'employee': employee,
+        'form': form,
     }
     return render(request, 'delete.html', context)

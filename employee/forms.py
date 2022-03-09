@@ -20,3 +20,8 @@ class EditEmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
         exclude = ['user']
+
+class DeleteEmployeeForm(forms.ModelForm):
+    class Meta:
+        model = Employee
+        exclude = ['user']
