@@ -12,36 +12,59 @@ This program requires python3.+ (and pip) installed, a guide on how to install p
 ## Setup/Installation Requirements
 To view the app, ensure you have the required modules installed. Here is a run through of how to set up the application:
 
+
+Step 1 : Clone this repository using;
+
 ```
-Step 1 : Clone this repository using git clone https://github.com/AnnabelNkir/MVC-CrudCapability.git or downloading a ZIP file of the code.
+git clone https://github.com/AnnabelNkir/MVC-CrudCapability.git
+``` 
+
 
 Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened.
 
 Step 3 : Open the terminal, go to the project directory and run the following commands: 
 
-+ pip install virtualenv then
-+ virtualenv venv
-+ source venv/bin/activate
-
-Step 4 : Download the all dependencies in the requirements.txt using pip install -r requirements.txt.
-
-Step 5 : Setup Database
-Setup your database User,Password, Host then make migrate
-
-python manage.py makemigrations`
-   then
-python manage.py migrate`
-
-Step 6 : You can now launch the application locally by running the command python manage.py runserver and copying the link given on the terminal on your browser.
-
-Step 7 : Run the command python manage.py createsuperuser to create an admin account in order to post. Access to the admin panel is by adding the path /admin to the address bar.
-
-Step 8 : To test the application run
-
-`python manage.py test`
-
-Step 9 :  Open the application on your browser 127.0.0.1:8000. 
 ```
+pip install virtualenv
+```
+```
+virtualenv venv
+```
+```
+source venv/bin/activate
+```
+
+Step 4 : Download the all dependencies in the requirements.txt using;
+```
+pip install -r requirements.txt
+```
+
+Step 5 : Database setup.
+
+Setup your database User,Password, Host then make migrate
+```
+python manage.py makemigrations
+```
+   then
+```   
+python manage.py migrate
+```
+Step 6 : You can now launch the application locally by running the command;
+```
+python manage.py runserver
+```
+
+Step 7 : Run the command below to create an admin account in order to post. Access to the admin panel is by adding the path /admin to the address bar.
+ 
+```
+python manage.py createsuperuser
+```
+Step 8 : To test the application run
+```
+python manage.py test
+```
+Step 9 :  Open the application on your browser 127.0.0.1:8000. 
+
 ## User stories
 
 The user is expected to navigate seamlessly through the application.
